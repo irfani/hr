@@ -29,7 +29,7 @@ RUN apt-get update && \
         wkhtmltopdf
 
 # Install Odoo
-ENV ODOO_VERSION 14.0
+ENV ODOO_VERSION 13.0
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.latest_all.deb  \
     && apt-get update \
     && apt-get -y install --no-install-recommends ./odoo.deb \
